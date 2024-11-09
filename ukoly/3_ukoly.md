@@ -27,5 +27,20 @@ to už velmi složitý úkol.
 Vymyslete si číslo od 1 do 100. Nechte uživatele tohle číslo hádat, dokud ho neuhodne. Říkejte mu, jestli číslo, které zadal (hádal) je větší nebo menší než vaše číslo, které má uhodnout. Př. Číslo, hadám je 26. Jako první zadám 66, program mi řekne že číslo je menší, zadám 25, program mi řekne, že číslo je větší. Zadám 30, program mi řekne, že číslo je menší. Zadám 26 a program mi řekne, že jsem ho uhodl a skončí.
 
 ## 4
-Napište program, který vypíše všechny číslo od 1 do 20 a řekne, jestli je číslo sudé nebo liché.
+Napište program, který vypíše všechny číslo od 1 do 20 a řekne, jestli je číslo sudé nebo liché, použijte while cyklus (pak to zkuste i for cyklem, je to jednodušší?).
 
+## 5 
+Napište program, který vytiskne všechny sudá čísla od nuly po 32. 
+
+
+## 6
+Napište program, který vytiskne všechny lichá čísla od 20 po 40. 
+
+## 7
+Napište program, který načte od uživatele slovo a mezi každé písmeno tohoto slova vloží hvězdičku. Př. Ze zadaného slova "Radek" bude vyprintěný výsledek "R*a*d*e*k*" (může se hodit u funkce `print()` parametr `end`, zopakujte si z teorie k `print()`).
+
+## 8
+Napište program, který načte slovo od uživatele a tohle slovo vytiskne bez všech základních samohlásek (písmena a, e, i, o, u). 
+
+## 9 
+Napište program, který projde čísla od 10 do 20 (včetně 20) a každé tohle číslo vynásobí 5x a vytiskne tohle číslo. 
