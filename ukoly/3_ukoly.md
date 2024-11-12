@@ -37,7 +37,7 @@ Napište program, který vytiskne všechny sudá čísla od nuly po včetně 32.
 Napište program, který vytiskne všechny lichá čísla od 20 po 40. 
 
 ## 7
-Napište program, který načte od uživatele slovo a mezi každé písmeno tohoto slova vloží hvězdičku. Př. Ze zadaného slova "Radek" bude vyprintěný výsledek "R*a*d*e*k*" (může se hodit u funkce `print()` parametr `end`, zopakujte si z teorie k `print()`).
+Napište program, který načte od uživatele slovo a mezi každé písmeno tohoto slova vloží hvězdičku. Př. Ze zadaného slova "Radek" bude vyprintěný výsledek "R\*a\*d\*e\*k\*" (může se hodit u funkce `print()` parametr `end`, zopakujte si z teorie k `print()`).
 
 ## 8
 Napište program, který načte slovo od uživatele a tohle slovo vytiskne bez všech základních samohlásek (písmena a, e, i, o, u). 
