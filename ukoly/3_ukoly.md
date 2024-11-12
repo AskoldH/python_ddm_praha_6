@@ -30,7 +30,7 @@ Vymyslete si číslo od 1 do 100. Nechte uživatele tohle číslo hádat, dokud 
 Napište program, který vypíše všechny číslo od 1 do 20 a řekne, jestli je číslo sudé nebo liché, použijte while cyklus (pak to zkuste i for cyklem, je to jednodušší?).
 
 ## 5 
-Napište program, který vytiskne všechny sudá čísla od nuly po 32. 
+Napište program, který vytiskne všechny sudá čísla od nuly po včetně 32. 
 
 
 ## 6
