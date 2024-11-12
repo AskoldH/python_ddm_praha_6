@@ -1,4 +1,4 @@
-# Příklady k procvičení 2 (teorie [podmínky](../teorie/5_cykly.ipynb)).
+# Příklady k procvičení 2 (teorie [cykly](../teorie/5_cykly.ipynb)).
 
 Tyhle přiklady budeme řešit během kroužku ale můžete si je řešit i doma jakožto další procvičení. Některé budou jednoduché, jíné velmi složité. U každého se zkuste zamyslet, budete mít za úkol vyřešit jen úkoly, které budete moci zvládnout, vždy k nim budeme mít probranou teorii. 
 
