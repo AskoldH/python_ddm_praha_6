@@ -44,3 +44,18 @@ Napište program, který načte slovo od uživatele a tohle slovo vytiskne bez v
 
 ## 9 
 Napište program, který projde čísla od 10 do 20 (včetně 20) a každé tohle číslo vynásobí 5x a vytiskne tohle číslo. 
+
+## 10
+Načtěte od uživatele 10 čísel, vložte je do listu, seřaďte je a pak je vytiskněte.
+
+## 11
+Načtěte od uživatele tři jména, uložte je do listu a pak postupně pozdravte tyhle lidi pomocí těchto tří jmen, použijte for loop.
+
+## 12
+Načtěte od uživatele 10 čísel do listu, uložte je do seznamu, najděte v nich číslo nejměnší a to vytiskněte.
+
+## 13
+Načtěte od uživatele 4 čísla do listu, vytiskněte všechna sudá, pokud nebude sudé ani jedno tak vytisněte "Sudé není ani jedno!".
+
+## 14
+Načtěte od uživatele 5 jmen do listu, pokud bude jméno delší než 5 písmen tak ho ze seznamu smažte a nakonec list vytiskněte.
