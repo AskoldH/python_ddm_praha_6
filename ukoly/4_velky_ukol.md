@@ -151,3 +151,51 @@ while True:
 
 ## Verze 3
 Máme hrací plochu, tedy naše moře, reprezentované listem listů, zkusme si vytvořit nové, pomocné tajné moře (nebudeme ho ukazovat uživateli), kde budeme mít zaznamenané pozice lodí nějakým znakem (třeba 'L' jak loď). Při kontrolování zda jsme potopili loď či nikoli pak budeme kontrolovat co je na pozici v tomto moři (listu listů) a tím se zbavíme potřeby mít proměnnou pro každou souřadnici našich lodí a bude pro nás jednodušší přidávat a odebírat lodě do moře (jen změníme hodnotu v našem pomocném tajném moři). Ostatní funkcionalita zůstává stejná.
+
+```python
+max_sloupec = max_radek = 5
+
+mrizka = []
+for _ in range(max_radek):
+    mrizka.append(['?', '?', '?', '?', '?'])
+
+tajna_mrizka = [['?', '?', '?', '?', '?'],
+                ['?', 'L', '?', '?', '?'],
+                ['?', '?', 'L', '?', '?'],
+                ['?', '?', '?', 'L', '?'],
+                ['?', '?', '?', '?', '?']]
+
+pocet_lodi = 3
+pocet_potopenych = 0
+
+print(f"Vítej ve hře, tvým úkolem je potopit loď!")
+print(f"Hádej její souřadnice řádku (0 až {max_radek-1}) a sloupce {max_sloupec-1}...")
+
+while True:
+    print("===================================================")
+    
+    nacteny_radek = int(input("Zadejte číslo řádku: "))
+    if nacteny_radek < 0 or nacteny_radek > max_radek - 1:
+        print(f"Špatně jsi zadal souřadnici řádku, rozsah je 0 až {max_radek-1}")
+        continue
+    
+    nacteny_sloupec = int(input("Zadejte číslo sloupce: "))
+    if nacteny_sloupec < 0 or nacteny_sloupec > max_sloupec- 1:
+        print(f"Špatně jsi zadal souřadnici sloupce, rozsah je 0 až {max_sloupec-1}")
+    
+    if (tajna_mrizka[nacteny_radek][nacteny_sloupec] == 'L'):
+        tajna_mrizka[nacteny_radek][nacteny_sloupec] = '!'
+        mrizka[nacteny_radek][nacteny_sloupec] = '!'
+        pocet_potopenych += 1
+        print("Potopil jsi loď!")
+    else:
+        mrizka[nacteny_radek][nacteny_sloupec] = 'x'
+        print("Netrefil ses!")
+    
+    for radek in mrizka:
+        print(radek)
+    
+    if (pocet_potopenych == pocet_lodi):
+        print("\n!!!Potopil jsi všechny tři lodě!!!")
+        break
+```
