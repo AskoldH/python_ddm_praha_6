@@ -25,3 +25,44 @@ U: 1
 
 # Testování
 Nejdříve svůj program pořádně otestujte, následně už nezbývá nic jiného, než to přimo otestovat kolegy z křoužku, nebo spíš otestovat kolegy zda umí převádět jedničky a nuly na text!
+
+Jedno z možných řešení úkolu:
+```python
+def vypis_sifru(sifra_list):
+    print()
+    for cislo in sifra_list:
+        print(format(cislo, '08b'), end=" ")
+    print()
+
+def zpracuj_sifru(sifra_list, sifra_text):
+    vypis_sifru(sifra_list)
+    reseni_od_uzivatele = input("Zadej text který představují binární čísla: ")
+    if reseni_od_uzivatele == sifra_text:
+        print("Správná odpověď! Dobrá práce. Zkus další šifru...\n")
+        return True
+    else: 
+        print("Špatná odpověď, běž potrénovat a mrknout se jak to funguje.")
+        return False
+
+##############################################################################
+
+sifra_1 = [65, 104, 111, 106, 49]
+sifra_1_text = "Ahoj1"
+
+sifra_2 = [65, 104, 111, 106, 50]
+sifra_2_text = "Ahoj2"
+
+sifra_3 = [65, 104, 111, 106, 51]
+sifra_3_text = "Ahoj3"
+
+uspech = True
+
+while uspech:
+    vyber_uzivatele = int(input("Zadejtej číslo šifry, kterou chceš řešit: " ))
+    if vyber_uzivatele == 1: 
+        uspech = zpracuj_sifru(sifra_1, sifra_1_text)
+    elif vyber_uzivatele == 2: 
+        uspech = zpracuj_sifru(sifra_2, sifra_2_text)
+    elif vyber_uzivatele == 3: 
+        uspech = zpracuj_sifru(sifra_3, sifra_3_text)
+```
