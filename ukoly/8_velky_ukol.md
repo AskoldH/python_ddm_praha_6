@@ -66,3 +66,73 @@ while uspech:
     elif vyber_uzivatele == 3: 
         uspech = zpracuj_sifru(sifra_3, sifra_3_text)
 ```
+
+Rozšířená verze i o hádání v opačném směru šifrování, tedy z textu do binární soustavy:
+```
+def vypis_sifru(sifra_list):
+    print()
+    for cislo in sifra_list:
+        print(format(cislo, '08b'), end=" ")
+    print()
+
+def zpracuj_sifru_bin(sifra_list, sifra_text):
+    vypis_sifru(sifra_list)
+    reseni_od_uzivatele = input("Zadej text který představují binární čísla: ")
+    if reseni_od_uzivatele == sifra_text:
+        print("Správná odpověď! Dobrá práce. Zkus další šifru...\n")
+        return True
+    else: 
+        print("Špatná odpověď, běž potrénovat a mrknout se jak to funguje.")
+        return False
+
+def vytvor_bin_str(sifra_list):
+    sifra_bin_str = ""
+    for cislo in sifra_list:
+        sifra_bin_str += str(format(cislo, '08b'))
+    return sifra_bin_str
+
+def zpracuj_sifru_dec(sifra_list, sifra_text):
+    print("Převeď do binární soustavy (neodděluj čísla mezerami): ", sifra_text)
+    reseni_od_uzivatele = input("Posloupnost jedniček a nul představující toto slovo: ")
+    
+    if reseni_od_uzivatele == vytvor_bin_str(sifra_list):
+        print("Správná odpověď! Dobrá práce. Zkus další šifru...\n")
+        return True
+    else: 
+        print("Špatná odpověď, běž potrénovat a mrknout se jak to funguje.")
+        return False        
+
+##############################################################################
+
+sifra_1 = [65, 104, 111, 106, 49]
+sifra_1_text = "Ahoj1"
+
+sifra_2 = [65, 104, 111, 106, 50]
+sifra_2_text = "Ahoj2"
+
+sifra_3 = [65, 104, 111, 106, 51]
+sifra_3_text = "Ahoj3"
+
+uspech = True
+
+while uspech:
+    vyber_uzivatele = int(input("Chceš luštit text->binár (vyber 1) nebo binár->text (vyber 2): "))
+    
+    if vyber_uzivatele == 1:
+        vyber_uzivatele = int(input("Zadejte číslo šifry, kterou chceš řešit: " ))
+        if vyber_uzivatele == 1: 
+            uspech = zpracuj_sifru_dec(sifra_1, sifra_1_text)
+        elif vyber_uzivatele == 2: 
+            uspech = zpracuj_sifru_dec(sifra_2, sifra_2_text)
+        elif vyber_uzivatele == 3: 
+            uspech = zpracuj_sifru_dec(sifra_3, sifra_3_text)
+    
+    elif vyber_uzivatele == 2:
+        vyber_uzivatele = int(input("Zadejte číslo šifry, kterou chceš řešit: " ))
+        if vyber_uzivatele == 1: 
+            uspech = zpracuj_sifru_bin(sifra_1, sifra_1_text)
+        elif vyber_uzivatele == 2: 
+            uspech = zpracuj_sifru_bin(sifra_2, sifra_2_text)
+        elif vyber_uzivatele == 3: 
+            uspech = zpracuj_sifru_bin(sifra_3, sifra_3_text)
+```
