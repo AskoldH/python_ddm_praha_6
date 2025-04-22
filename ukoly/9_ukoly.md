@@ -16,5 +16,37 @@ Vytvořte program na hraní hry *Kámen, nůžky, papír*. Mějme tuto hru pro p
 ## 3
 Vytvořte program *sledovač známek*. Tedy program do které si budeme moci nahrát naše známky ze školy, program si je uloží a dovolí nám si vybrat nějakou funkci, tedy například průměr všch známek, nejlepší známku v předmětu, nejhorší... Když zadáme nejdřív známky z matematiky a následně známky z češtiny, tak pak thle funkce budeme moci dělat pro oba dva předměty. Budou se hodit slovníky a funkce `min(), max(), sum(), len()`.
 
+Budeme pokračovat s následujícím kódem, rozšíříme ho o zapisování do souboru: 
+```python
+def vrat_prumer(list_znamek):
+    soucet = 0
+    for znamka in list_znamek:
+        soucet += znamka
+    return soucet / len(list_znamek)
+
+def vrat_nejlepsi(list_znamek):
+    return min(list_znamek)
+
+def vrat_nejhorsi(list_znamek):
+    return max(list_znamek)
+
+########################################################
+nazev_predmetu = input("Zadejte název předmětu: ")
+znamky_text = input("Zadejte známky oddělené mezerami: ")
+
+list_znamek = []
+for znamka in znamky_text.split():
+    list_znamek.append(int(znamka))
+
+volba = int(input("Zadejte co chcete (průměr(1), nejlepší známka(2), nejhorší známka(3)): "))
+
+if volba == 1:
+    print(vrat_prumer(list_znamek))
+elif volba == 2:
+    print(vrat_nejlepsi(list_znamek))
+elif volba == 3:
+    print(vrat_nejhorsi(list_znamek))
+```
+
 ## 4 
 Palindrom je slovo (či věta a nás budou prozatím zajímat jen slova), které se čte zepředu i zezadu stejně, tedy například *abba* nebo *bararab* jsou palindromy. Vytvořte program pro detekci palindromů, tedy na vstupu zadáme slovo a program vypíše zda je slvovo palindrom či ne.
