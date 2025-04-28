@@ -30,22 +30,55 @@ def vrat_nejlepsi(list_znamek):
 def vrat_nejhorsi(list_znamek):
     return max(list_znamek)
 
+def nacti_znamky_ze_souboru(slovnik_znamek):
+    with open("uloziste.txt", 'r') as uloziste:
+        for radek in uloziste:
+            hodnoty = radek.split(' ')
+            for znamka in hodnoty[1:]:
+                slovnik_znamek[hodnoty[0]] = int(znamka)
+
+def zpracuj_text_se_znamkami(list_se_znamkami):
+    list_znamek = []
+    for znamka in list_se_znamkami:
+        list_znamek.append(int(znamka))
+
+    volba = int(input("Zadejte co chcete (průměr(1), nejlepší známka(2), nejhorší známka(3)): "))
+
+    if volba == 1:
+        print(vrat_prumer(list_znamek))
+    elif volba == 2:
+        print(vrat_nejlepsi(list_znamek))
+    elif volba == 3:
+        print(vrat_nejhorsi(list_znamek))
+
 ########################################################
-nazev_predmetu = input("Zadejte název předmětu: ")
-znamky_text = input("Zadejte známky oddělené mezerami: ")
+slovni_znamek = {}
 
-list_znamek = []
-for znamka in znamky_text.split():
-    list_znamek.append(int(znamka))
+nacti_znamky_ze_souboru(slovni_znamek)
 
-volba = int(input("Zadejte co chcete (průměr(1), nejlepší známka(2), nejhorší známka(3)): "))
+volba_uzivatele = int(input("Zadejte (1) pro přidání předmětu, (2) pro práci s předmětem: "))
+if (volba_uzivatele==1):
+    nazev_predmetu = input("Zadejte název předmětu: ")
+    znamky_text = input("Zadejte známky oddělené mezerami: ")
 
-if volba == 1:
-    print(vrat_prumer(list_znamek))
-elif volba == 2:
-    print(vrat_nejlepsi(list_znamek))
-elif volba == 3:
-    print(vrat_nejhorsi(list_znamek))
+    zpracuj_text_se_znamkami(znamky_text.split())
+
+    with open("uloziste.txt", 'a') as uloziste:
+        uloziste.write('\n' + nazev_predmetu + ' ')
+        uloziste.write(znamky_text)
+
+elif (volba_uzivatele==2):
+    jmeno_predmetu = input("Zadejte název předmětu: ")
+    mam_predmet = False
+    with open("uloziste.txt", 'r') as uloziste:
+        for radek in uloziste:
+            slova = radek.split(' ')
+            if (slova[0] == jmeno_predmetu):
+                mam_predmet = True
+                zpracuj_text_se_znamkami(slova[1:])
+                
+        if not mam_predmet:
+            print("Tento předmět nejdřív musíš přidat!")
 ```
 
 ## 4 
