@@ -1,6 +1,6 @@
 # Vánoční úkoly
 
-Tyhle úkoly s vánoční tématikou si projdeme na posledním kroužku roku 2024. Zopakujeme si cykly a funkci `print()`. Úkoly budou dva:
+Tyhle úkoly s vánoční tématikou si projdeme na posledním kroužku roku 2025. Zopakujeme si cykly a funkci `print()`. Úkoly budou dva:
 
 ## 0
 Vytisknutí stromečku. Načtěte od uživatele číslo, tohle bude výška stromečku. Stromeček bude vypadat následovně (pro výšku 11):
