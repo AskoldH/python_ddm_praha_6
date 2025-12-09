@@ -14,3 +14,12 @@ Nechte uživatele zadat rozsah, tedy dvě čísla. Následně sečtěte všechna
 
 ## 4
 Nechte uživatele zadat rok, tedy číslo, následně rozhodněte zda je tento rok přestupný či nikoli. (Podmínky přestupnosti jsou: pokud je rok dělitelný bezezbytku číslem 400 je přestupný, pokud je rok dělitelný číslem 4 bezezbytku ale ne číslem 100 bezezbytku, pak je přestupný). Tedy např. rok 1600 byl přestupný protože je dělitelný 400. Rok 2024 byl přestupný, protože byl dělitelný 4 ale ne 100. Rok 1900 nebyl přestupný, sice je dělitelný 4 ale taky 100, tedy není přestupný.
+
+## 5
+Naprogramujte 3x3 piškvorky, budou proti sobě hrát dva hráči, pole na které chtějí zadat x/o budou vybírat podle sloupce a řádku. Tedy pro usmítění dopřostřed zadám sloupec 2, řádek 2. Hra by měla automaticky detekovat zda někdo vyhrál. Jako rozšíření přidejte větší pole. Hrací pole pro nějaký stav ve hře by mohlo vypadat například:
+
+```
+|x|x|o|
+|o| | |
+| |x| |
+```
