@@ -26,14 +26,4 @@ Naprogramujte hru Šibenice (Hráč vs. Počítač). Počítač si na začátku 
 
 ## 6
 
-Naprogramujte 3x3 piškvorky, budou proti sobě hrát dva hráči, pole na které chtějí zadat x/o budou vybírat podle sloupce a řádku. Tedy pro usmítění dopřostřed zadám sloupec 2, řádek 2. Hra by měla automaticky detekovat zda někdo vyhrál. Jako rozšíření přidejte větší pole. Hrací pole pro nějaký stav ve hře by mohlo vypadat například:
-
-```
-|x|x|o|
-|o| | |
-| |x| |
-```
-
-## 7
-
 Vytvořte aplikaci, která bude umožňovat přeložit soubor do Morseovy abecedy a naopak. Aplikace se nejdříve zeptá, zda chce uživatel překládat z textu do Morseovky, nebo z Morseovky do textu. Tedy např. pokud uživatel zadá slovo ahoj, program vypisuje: `.- .... --- .---` nebo pokud uživatel zadá `.... --- .-.. .-` program vypisuje: hola. Jednotlivá písmena Morseovky jsou od sebe oddělena mezerami a uživatel může zadat maximálně jedno slovo, tedy co řádek to slovo. Jak překládat z a do Morseovy abecedy najdete třeba [zde](https://cs.wikipedia.org/wiki/Morseova_abeceda).
