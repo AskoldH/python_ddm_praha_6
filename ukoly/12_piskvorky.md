@@ -39,3 +39,69 @@ Tohle bude v programu vypadat jako dlouhý blok `if` a `elif` podmínek pod sebo
 ---
 
 Tohle řešení se dá rozšířit o větší hrací pole, pokud už máš 3x3 verzi tak to zkus!
+
+---
+Řešení:
+
+```python
+pole = [[" ", " ", " "], [" ", " ", " "], [" ", " ", " "]]
+
+hrac = "x"
+
+while True:
+    print("|" + pole[0][0] + "|" + pole[0][1] + "|" + pole[0][2] + "|")
+    print("|" + pole[1][0] + "|" + pole[1][1] + "|" + pole[1][2] + "|")
+    print("|" + pole[2][0] + "|" + pole[2][1] + "|" + pole[2][2] + "|")
+    print()
+
+    print("Hraje hrac", hrac)
+    sloupec = int(input("Zadej sloupec: ")) - 1
+    radek = int(input("Zadej radek: ")) - 1
+
+    if radek < 0 or radek > 2 or sloupec < 0 or sloupec > 2:
+        print("Neplatny tah")
+        break
+
+    if pole[radek][sloupec] != " ":
+        print("Obsazeno")
+        if hrac == "x":
+            print("Vyhrava hrac o")
+        else:
+            print("Vyhrava hrac x")
+        break
+
+    pole[radek][sloupec] = hrac
+
+    if pole[0][0] == hrac and pole[0][1] == hrac and pole[0][2] == hrac:
+        print("Vyhrava hrac", hrac)
+        break
+    if pole[1][0] == hrac and pole[1][1] == hrac and pole[1][2] == hrac:
+        print("Vyhrava hrac", hrac)
+        break
+    if pole[2][0] == hrac and pole[2][1] == hrac and pole[2][2] == hrac:
+        print("Vyhrava hrac", hrac)
+        break
+
+    if pole[0][0] == hrac and pole[1][0] == hrac and pole[2][0] == hrac:
+        print("Vyhrava hrac", hrac)
+        break
+    if pole[0][1] == hrac and pole[1][1] == hrac and pole[2][1] == hrac:
+        print("Vyhrava hrac", hrac)
+        break
+    if pole[0][2] == hrac and pole[1][2] == hrac and pole[2][2] == hrac:
+        print("Vyhrava hrac", hrac)
+        break
+
+    if pole[0][0] == hrac and pole[1][1] == hrac and pole[2][2] == hrac:
+        print("Vyhrava hrac", hrac)
+        break
+    if pole[0][2] == hrac and pole[1][1] == hrac and pole[2][0] == hrac:
+        print("Vyhrava hrac", hrac)
+        break
+
+    if hrac == "x":
+        hrac = "o"
+    else:
+        hrac = "x"
+
+```
