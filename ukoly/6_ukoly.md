@@ -27,3 +27,53 @@ Naprogramujte hru Šibenice (Hráč vs. Počítač). Počítač si na začátku 
 ## 6
 
 Vytvořte aplikaci, která bude umožňovat přeložit soubor do Morseovy abecedy a naopak. Aplikace se nejdříve zeptá, zda chce uživatel překládat z textu do Morseovky, nebo z Morseovky do textu. Tedy např. pokud uživatel zadá slovo ahoj, program vypisuje: `.- .... --- .---` nebo pokud uživatel zadá `.... --- .-.. .-` program vypisuje: hola. Jednotlivá písmena Morseovky jsou od sebe oddělena mezerami a uživatel může zadat maximálně jedno slovo, tedy co řádek to slovo. Jak překládat z a do Morseovy abecedy najdete třeba [zde](https://cs.wikipedia.org/wiki/Morseova_abeceda).
+
+---
+
+Řešení šiběnice:
+
+```
+slova = ["python", "skola", "program", "pocitac", "hadani"]
+slovo = slova[0]
+
+zivoty = 6
+uhadnuto = []
+
+for i in range(len(slovo)):
+    uhadnuto.append("_")
+
+while True:
+    print("Slovo:", end=" ")
+    for znak in uhadnuto:
+        print(znak, end=" ")
+    print()
+    print("Zivoty:", zivoty)
+
+    pismeno = input("Zadej pismeno: ")
+
+    nalezeno = False
+
+    for i in range(len(slovo)):
+        if slovo[i] == pismeno:
+            uhadnuto[i] = pismeno
+            nalezeno = True
+
+    if nalezeno == False:
+        zivoty = zivoty - 1
+
+    hotovo = True
+    for znak in uhadnuto:
+        if znak == "_":
+            hotovo = False
+
+    if hotovo == True:
+        print("Vyhral jsi")
+        print("Slovo bylo:", slovo)
+        break
+
+    if zivoty == 0:
+        print("Prohral jsi")
+        print("Slovo bylo:", slovo)
+        break
+
+```
