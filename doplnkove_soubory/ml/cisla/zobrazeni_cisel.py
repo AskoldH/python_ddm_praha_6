@@ -8,9 +8,10 @@ import matplotlib.pyplot as plt
 train_images = train_images.astype("float32") / 255
 
 # zobrazení obrázku z train images
-image_to_show = train_images[78] 
+index_to_show = 150
+image_to_show = train_images[index_to_show] 
 plt.imshow(image_to_show, cmap='gray') # jak se má zobrazit
-plt.title(f"Číslo na obrázku: {train_labels[0]}") # nastavení nadpisu
+plt.title(f"Číslo na obrázku: {train_labels[index_to_show]}") # nastavení nadpisu
 plt.colorbar() # ukázání stupnice
 nazev_vystupniho_souboru = "vystup.png"
 plt.savefig(nazev_vystupniho_souboru) # uložení do souboru

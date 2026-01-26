@@ -15,20 +15,19 @@ model = models.Sequential([
     #    Více neuronů = větší "kapacita mozku".
     # 2. Přidání vrstev: Můžeš pod tento řádek přidat další: layers.Dense(64, activation='relu'),
     #    Více vrstev = model dokáže pochopit složitější tvary.
-    layers.Dense(2, activation='relu'), 
+    layers.Dense(2, activation='relu'),
     layers.Dense(10, activation='softmax') # 10 výstupů (čísla 0-9)
 ])
 
 model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
-
-# trénování modelu
+    
 print("\n--- ZAČÍNÁM TRÉNOVAT ---")
 # Co zde  můžeš měnit pro lepší výsledky:
     # 3. Více epoch: Více epoch znamená že model projde vícekrát data. To znamená 
     # že si data může model lépe "zapamatovat"
-model.fit(train_images, train_labels, epochs=1)
+model.fit(train_images, train_labels, epochs=10)
 
 # uložení modelu
 nazev_modelu = "muj_model_mnist.keras"

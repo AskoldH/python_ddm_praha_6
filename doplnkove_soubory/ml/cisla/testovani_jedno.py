@@ -10,7 +10,7 @@ _, (test_images, test_labels) = tf.keras.datasets.mnist.load_data()
 test_images = test_images.astype("float32") / 255
 
 # testování jednoho čísla
-index = 7
+index = 80
 predikce = model.predict(test_images[index:index+1])
 tip_ai = np.argmax(predikce)
 skutecnost = test_labels[index]
