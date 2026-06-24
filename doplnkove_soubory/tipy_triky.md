@@ -145,3 +145,4 @@ list_1 = list(range(100))
 9. Každý 10. prvek od 5: Vytvořte seznam result_9, který začíná prvkem s hodnotou 5 a obsahuje každý desátý prvek poté (5, 15, 25, 35, ...).
 
 10. Bez prvních 5 a posledních 5 prvků: Vytvořte seznam result_10, který obsahuje všechny prvky kromě prvních 5 a posledních 5 ze seznamu my_list.
+
